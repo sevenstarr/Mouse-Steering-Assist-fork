@@ -50,12 +50,14 @@ The sequences exercise both branches of the existing CSP version compatibility
 guard, FFB on/off, 0%/2%/10%, pedal press/release, alternate keys, Shift and scroll.
 Newer CSP behavior is simulated; this is not a test in that CSP release.
 
-## Validation still required in Assetto Corsa
+## In-game validation and further checks
 
-The code was tested with LuaJIT 2.1 and inspected against the installed CSP
-0.2.11 build 3465 SDK. No actual driving session or visual confirmation of the
-new Content Manager field has been performed. The implementation is a proposal
-pending integration and driving validation.
+The code passed 28,934 assertions in LuaJIT 2.1 and was inspected against the
+installed CSP 0.2.11 build 3465 SDK. On 2026-10-14 the fork user reported that
+the installed deadzone worked correctly in Assetto Corsa in that environment.
+This is user-reported game validation, separate from the automated tests.
+Other CSP versions/cars and Content Manager settings persistence have not been
+separately validated. The following checklist can be used when testing further:
 
 1. Start an offline practice session with 2%. With the car stationary, verify a
    central region with zero steering command on an input indicator.
